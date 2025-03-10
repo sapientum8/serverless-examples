@@ -3,8 +3,10 @@ frameworkVersion: '4'
 
 provider:
   name: aws
-  runtime: python3.12
-
+  runtime: python3.13
+  environment:
+    APP_DOMAIN: ${param:domain}
+    KEY: ${param:key}
 functions:
   hello:
     handler: handler.hello
